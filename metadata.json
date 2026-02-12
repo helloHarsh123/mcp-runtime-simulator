@@ -1,0 +1,5 @@
+
+{
+  "name": "MCP Runtime Simulator",
+  "description": "A world-class visualizer and execution environment for MCP-compatible agent runtimes, featuring autonomous tool selection, state persistence, and structured reasoning."
+}

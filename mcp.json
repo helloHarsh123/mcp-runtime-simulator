@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+   "postgres": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:password@localhost:5432/mydb"
+      ],
+      "env": {
+        "PGUSER": "postgres",
+        "PGPASSWORD": "password",
+        "PGDATABASE": "mydb"
+      },
+      "description": "PostgreSQL database server",
+      "transport": "stdio"
+    },
+    "everything": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-everything"
+      ],
+      "description": "Everything server (echo, time)",
+      "transport": "stdio"
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-github"
+      ],
+      "description": "GitHub operations (search, issues, PRs)",
+      "transport": "stdio"
+    }
+  }
+}
