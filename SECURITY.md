@@ -3,7 +3,7 @@
 ## Incident Summary
 On March 5, 2026, it was discovered that sensitive API keys and credentials were exposed in the repository history. This affects the following services:
 
-- Google Gemini API Key
+- Google Gemini API Key (exposed in both mcp.json hardcoded credentials and SYSTEM_STATUS.md)
 - Azure OpenAI API Key and Endpoint
 - GitHub Personal Access Token
 - OpenAI API Key

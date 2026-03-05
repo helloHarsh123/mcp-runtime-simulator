@@ -74,8 +74,8 @@ All sensitive configuration should be stored in environment variables, not in co
 - Database credentials (PGUSER, PGPASSWORD, PGDATABASE, etc.)
 
 ### Security Incident
-On March 5, 2026, hardcoded database credentials were accidentally committed to the repository.
-These have been removed and replaced with environment variable references.
+On March 5, 2026, hardcoded database credentials were accidentally committed to the repository, and additionally, a Google Gemini API key was exposed in the SYSTEM_STATUS.md file.
+These have been removed and replaced with environment variable references and placeholders respectively.
 See [SECURITY.md](SECURITY.md) for details about the incident and required actions.
 
 **ACTION REQUIRED**: If you cloned this repository before March 5, 2026, please review [SECURITY.md](SECURITY.md)
