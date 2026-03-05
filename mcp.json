@@ -3,13 +3,14 @@
    "postgres": {
       "command": "npx",
       "args": [
-        "@modelcontextprotocol/server-postgres",
-        "postgresql://postgres:password@localhost:5432/mydb"
+        "@modelcontextprotocol/server-postgres"
       ],
       "env": {
-        "PGUSER": "postgres",
-        "PGPASSWORD": "password",
-        "PGDATABASE": "mydb"
+        "PGUSER": "${PGUSER}",
+        "PGPASSWORD": "${PGPASSWORD}",
+        "PGDATABASE": "${PGDATABASE}",
+        "PGHOST": "${PGHOST:-localhost}",
+        "PGPORT": "${PGPORT:-5432}"
       },
       "description": "PostgreSQL database server",
       "transport": "stdio"
