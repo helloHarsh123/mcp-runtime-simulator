@@ -192,8 +192,11 @@ Return Conversation with Updated History
 
 ### Environment Variables (.env.local)
 ```
-GEMINI_API_KEY=AIzaSyA-Cv_8-h4FKhES0HFJl0gMX2ngAl5byMs
+GEMINI_API_KEY=your_gemini_api_key_here
 ```
+
+**Note:** Replace `your_gemini_api_key_here` with your actual Google Gemini API key.
+API keys should never be committed to version control systems.
 
 ### MCP Configuration (mcp.json)
 ```json
