@@ -56,3 +56,27 @@ Then:
 1. Spawn a server: `curl -X POST http://localhost:4000/runtime/spawn-server -d '{"server_name":"postgres"}'`
 2. List available servers: `curl http://localhost:4000/servers`
 3. Kill a server: `curl -X POST http://localhost:4000/runtime/kill-server -d '{"server_name":"postgres"}'`
+
+## Security Best Practices
+
+**IMPORTANT**: Never commit sensitive information like API keys, passwords, or tokens to version control.
+
+### Environment Variables
+All sensitive configuration should be stored in environment variables, not in code files.
+
+### Required Environment Variables
+- `GEMINI_API_KEY` - Your Google Gemini API key
+- `AZURE_OPENAI_ENDPOINT` - Your Azure OpenAI endpoint URL
+- `AZURE_OPENAI_KEY` - Your Azure OpenAI API key
+- `AZURE_OPENAI_DEPLOYMENT` - Your Azure OpenAI deployment name
+- `GITHUB_PERSONAL_ACCESS_TOKEN` - Your GitHub personal access token
+- `OPENAI_API_KEY` - Your OpenAI API key
+- Database credentials (PGUSER, PGPASSWORD, PGDATABASE, etc.)
+
+### Security Incident
+On March 5, 2026, hardcoded database credentials were accidentally committed to the repository.
+These have been removed and replaced with environment variable references.
+See [SECURITY.md](SECURITY.md) for details about the incident and required actions.
+
+**ACTION REQUIRED**: If you cloned this repository before March 5, 2026, please review [SECURITY.md](SECURITY.md)
+and rotate any API keys you may have used with this codebase.
